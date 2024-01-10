@@ -1,3 +1,4 @@
+// Page 61, not an excercise, just reviewing the concept
 // get properties on a datatype that you have defined
 
 
@@ -12,9 +13,13 @@
 
 
 
+
+
 // let stringPrototypeProperties = Object.getOwnPropertyNames(String.prototype)
 
 // console.log(stringPrototypeProperties)
+
+
 
 
 
