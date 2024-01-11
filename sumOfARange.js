@@ -9,8 +9,26 @@ const getRange = (start, end) => {
         myArray.push(counter)
         counter++
     }
-    console.log(myArray)
+    return myArray;
 }
 
-getRange(4, 20)
+getRange(1, 10)
 
+
+// seond write a sum function that takes an array as an argument and returns the sum of all
+// the numbers in the array
+
+// console.log(myArray) // myArray is [1, 2, 3, ... 10]
+
+const getSum = (numbers) => {
+    let sum = 0
+    for (let number of numbers) {
+        sum += number
+    }
+    return sum;
+}
+
+console.log(getSum(myArray))
+
+
+// 
