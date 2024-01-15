@@ -21,6 +21,7 @@ const arrayToList = (array) => {
 
 console.log(arrayToList(myArray))
 
+// second solution
 
 myList = { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }
 
@@ -39,8 +40,14 @@ const listToArray = (list) => {
 }
 
 
-listToArray(myList)
-console.log(nextArray)
+// listToArray(myList)
+// console.log(nextArray)
 
 
+// third solution
+// prepend the list with a new element
+
+
+
+    
 
