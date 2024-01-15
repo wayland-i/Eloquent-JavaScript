@@ -20,3 +20,27 @@ const arrayToList = (array) => {
 }
 
 console.log(arrayToList(myArray))
+
+
+myList = { value: 1, rest: { value: 2, rest: { value: 3, rest: null } } }
+
+nextArray = []
+const listToArray = (list) => {
+    if (list.rest == null) {
+        nextArray.push(list.value)
+        // console.log(nextArray)
+        
+    } else {
+        nextArray.push(list.value)
+        // console.log(nextArray)
+        listToArray(list.rest)
+    }
+    // console.log(nextArray)
+}
+
+
+listToArray(myList)
+console.log(nextArray)
+
+
+
