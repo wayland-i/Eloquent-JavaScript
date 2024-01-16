@@ -15,7 +15,9 @@ function deepEqual (value1, value2) {
         if (value1.length === undefined && value2.length === undefined) {
             // checks if both values are objs
             console.log('is object')
-            // NEED TO FINISH HERE
+            // NEED TO FINISH HERE, iterate through both the keys and the values, recursively checking, then getting a result from the recursive call, then proceeding
+            // first check the keys, Object.keys(value1), how do I get a return value from this that says "all true", an array that true values get pushed into?
+            // then I can proceed to checking the key values, I think the array of bools would be a good solution.
         } else if (typeof value1.length === 'number' && typeof value2.length === 'number') {
             // confirms both values are arrays
             console.log('is array')
