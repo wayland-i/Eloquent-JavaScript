@@ -1,3 +1,4 @@
+let truthArray = []
 function deepEqual (value1, value2) {
     // this will return true if only given primitive data types
     // a filter must be set up above this if statement to only send in primitive data types
@@ -18,6 +19,27 @@ function deepEqual (value1, value2) {
             // NEED TO FINISH HERE, iterate through both the keys and the values, recursively checking, then getting a result from the recursive call, then proceeding
             // first check the keys, Object.keys(value1), how do I get a return value from this that says "all true", an array that true values get pushed into?
             // then I can proceed to checking the key values, I think the array of bools would be a good solution.
+            let truth = deepEqual(Object.keys(value1), Object.keys(value2))
+            console.log("here")
+            console.log(truthArray)
+            if (truthArray.includes(false) || truthArray.length === 0) {
+                console.log("the keys are not the same")
+                return false
+            } else {
+                // check the key values
+                const keys = Object.keys(value1)
+
+                for (let key of keys) {
+                    if (keys[key] !== keys[key]) {
+                        // truthArray.push(false)
+                        return false
+                    } else {
+                        truthArray.push(true)
+                    }
+                }
+            }
+
+
         } else if (typeof value1.length === 'number' && typeof value2.length === 'number') {
             // confirms both values are arrays
             console.log('is array')
@@ -41,12 +63,22 @@ function deepEqual (value1, value2) {
         } else {
             if (value1 === value2) {
                 console.log("true")
+                truthArray.push(true)
                 return true
             } else {
+                truthArray.push(false)
                 return false
             }
         }
 
+    }
+
+    if (truthArray.includes(false)) {
+        console.log("These are not the same")
+        return false
+    } else {
+        console.log("These are the same")
+        return true
     }
 }
 
@@ -66,7 +98,7 @@ let num2 = 24
 let myArray1 = [1, 2, 3] // arrays are type objs (gives programmer length property and array methods), and are not ===, you ahve to check their elements recursively
 let myArray2 = [1, 2, 3]
 
-let myObj1 = {Age: 28, Name: "Ian", Location: "New York"}  // objs are not ===, you have to handle checking their properties recursively
+let myObj1 = {Age: 28, Name: "Ivan", Location: "New York"}  // objs are not ===, you have to handle checking their properties recursively
 let myObj2 = {Age: 28, Name: "Ian", Location: "New York"}
 
 console.log(deepEqual(myObj1, myObj2))
