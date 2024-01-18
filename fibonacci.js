@@ -1,21 +1,21 @@
 let n = 8;
-let output = []
-
-//F(n) = F(n-1) + F(n - 2)
+let output = [0, 1];
 
 const fib = (input) => {
-    // myArray = [1, 2, 3]
+
 
     let num = 1
     while (!output.includes(input)) {
-        let sum = (num - 1) + (num - 2)
+        let sum1 = output[output.length - 1];
+        let sum2 = output[output.length - 2];
         
-        output.push(Math.abs(sum))
-        num++
-        console.log(output)
-    }
+        let sum =  sum1 + sum2;
 
+        output.push(Math.abs(sum));
+        num++;
+    }
+    return output;
 }
 
 
-fib(8);
+console.log(fib(n))
