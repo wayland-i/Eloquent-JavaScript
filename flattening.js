@@ -24,7 +24,7 @@ console.log(myArray.concat(myArray1))
 // }
 
 
-this is a solution that doesn't use reduce or concat but still works
+// this is a solution that doesn't use reduce or concat but still works
 const newArray = new Array;
 
 for (let i = 0; i < superArray.length; i ++) {
