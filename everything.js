@@ -1,4 +1,4 @@
-implement every as a function that takes an array and predicate function as parameters
+// implement every as a function that takes an array and predicate function as parameters
 
 const everyFunction = (array, predFunction) => {
     return predFunction(array)
