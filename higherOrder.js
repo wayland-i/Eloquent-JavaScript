@@ -1,0 +1,8 @@
+//filter
+
+
+//map
+
+//reduce
+
+//forEach
