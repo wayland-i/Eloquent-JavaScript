@@ -4,6 +4,14 @@
 
 //a callback function = a function that is passed as an arguement to another function
 
+//side effects = any observable change a fucntion makes outside of returning a value.
+//if a function does anything beyond computing and returning its result, then that's a side effect.
+
+//pure = A function without a side effect. Functions that DO NOT change the external world of the program. They do not update any global variables or return values that change things 
+
+//impure = A function that produces a side affect. 
+
+
 //filter
 //filter takes a callback function that returns true or false for each item, if it returns true, then the item stays in the new array. If not it is filtered out.
 const numbersInFilterArray = [1, 2, 3, 4, 5]
@@ -12,7 +20,9 @@ console.log(evens)
 
 //map
 //map takes a callback function that returns a NEW array. It performs essentially a forEach, but forEach does not inherently return an array, forEach just causes side effets.
+//map is for data transformations that we would like a brand new array for.
 //forEach always returns undefined, unless you tell it to explicitly return ~something~... it's just for logging or for showing things in the DOM really. It's really just an end point for an array.
+//forEach is really just to perform side effects. Logging, DOM updates, etc.
 const numsForMap = [1, 2, 3, 4]
 const doubled = numsForMap.map(x => x * 2)
 console.log(doubled)
