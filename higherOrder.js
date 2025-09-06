@@ -9,7 +9,7 @@
 
 //pure = A function without a side effect. Functions that DO NOT change the external world of the program. They do not update any global variables or return values that change things 
 
-//impure = A function that produces a side affect. 
+//impure = A function that produces a side affect. This is also a function that given input a,b... let's say input a stays the same, but input b changes, this would not be considered pure function. 
 
 
 //filter
