@@ -28,5 +28,8 @@ const doubled = numsForMap.map(x => x * 2)
 console.log(doubled)
 
 //reduce
+//for computing and returning a single value from an array. summing all the numbers in the array, or checking to see which is the biggest.
+
+
 
 //forEach
