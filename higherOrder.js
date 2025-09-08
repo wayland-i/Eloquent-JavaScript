@@ -29,6 +29,13 @@ console.log(doubled)
 
 //reduce
 //for computing and returning a single value from an array. summing all the numbers in the array, or checking to see which is the biggest.
+const numbers = [3, 7, 2, 9, 5];
+
+const max = numbers.reduce((acc, current) => {
+  return current > acc ? current : acc
+}, numbers[0])
+
+console.log("max", max)
 
 
 
