@@ -33,3 +33,11 @@ console.log(doubled)
 
 
 //forEach
+//forEach always returns undefined, unless you tell it to explicitly return ~something~... it's just for logging or for showing things in the DOM really. It's really just an end point for an array.
+//forEach is really just to perform side effects. Logging, DOM updates, etc.
+const numsForforEach = [1, 2, 3, 4, 5]
+numsForforEach.forEach(x => {
+    let y;
+    y = x * 2
+    console.log(y)
+})
